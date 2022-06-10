@@ -4,25 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primer Pagina</title>
+    <title>Actividad 1</title>
 </head>
 <body>
+    <!--Crear una pagina con un titulo y un formualrio que pida nombre y apellidos-->
     <h1>Bienvenidos</h1>
     <form action="">
         <label>¿Cual es tu nombre?</label>
-        <input type="text" placeholder="Ingresa el nombre">
-        <br>
-        <label>¿Cuales son tus apellidos?</label>
-        <input type="text" placeholder="Ingresa tus apellidos">
-        <input type="submit" value="enviar" onclick="datos()">
+        <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+        <label>¿Cual es tu apellido paterno?</label>
+        <input type="text" id="paterno" placeholder="Ingresa tu apellido paterno">
+        <label>¿Cual es tu apellido materno?</label>
+        <input type="text" id="materno" placeholder="Ingresa tu apellido materno">
+        <input type="button" value="Enviar" onclick="datos()">
     </form>
-        <script>
+    <script>
         function datos(){
-            var n = document.getElementById("nombre").value;
-            var p = document.getElementById("apellidos").value;
-            var texto = "Bienvenido "+n + p; 
-            alert(texto);
-            console.log(n);
+            var n = document.getElementById('nombre').value;
+            var p = document.getElementById('paterno').value;
+            var m = document.getElementById('materno').value;
+
+            alert("Tu nombre es: " + n + "\nTu primer apellido es: " + p + "\nTu segundo apellido es: " + m);
+
+            /*document.write('Tu nombre es:');
+            document.write(n);
+            document.write('<br>');
+            document.write('Tu primer apellido es:');
+            document.write(p);
+            document.write('<br>');
+            document.write('Tu segundo apellido es:');
+            document.write(m);*/
         }
     </script>
 </body>
