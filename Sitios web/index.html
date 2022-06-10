@@ -14,6 +14,16 @@
         <br>
         <label>¿Cuales son tus apellidos?</label>
         <input type="text" placeholder="Ingresa tus apellidos">
+        <input type="submit" value="enviar" onclick="datos()">
     </form>
+        <script>
+        function datos(){
+            var n = document.getElementById("nombre").value;
+            var p = document.getElementById("apellidos").value;
+            var texto = "Bienvenido "+n + p; 
+            alert(texto);
+            console.log(n);
+        }
+    </script>
 </body>
 </html>
